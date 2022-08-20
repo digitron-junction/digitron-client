@@ -7,7 +7,18 @@ option go_package = "nftminter/x/nftminter/types";
 
 // Msg defines the Msg service.
 service Msg {
-    // this line is used by starport scaffolding # proto/tx/rpc
+      rpc MintNft(MsgMintNft) returns (MsgMintNftResponse);
+// this line is used by starport scaffolding # proto/tx/rpc
+}
+
+message MsgMintNft {
+  string creator = 1;
+  string owner = 2;
+  string imageHash = 3;
+  string createdAt = 4;
+}
+
+message MsgMintNftResponse {
 }
 
 // this line is used by starport scaffolding # proto/tx/message
