@@ -1,5 +1,6 @@
 /* eslint-disable */
 import { Params } from './params';
+// @ts-ignore
 import { Writer, Reader } from 'protobufjs/minimal';
 
 export const protobufPackage = 'nftminter.nftminter';

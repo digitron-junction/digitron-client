@@ -1,4 +1,5 @@
 /* eslint-disable */
+// @ts-ignore
 import { Reader, Writer } from 'protobufjs/minimal';
 import { Params } from './params';
 
