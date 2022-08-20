@@ -1,0 +1,12 @@
+syntax = "proto3";
+package nftmaker.nftmaker;
+
+import "gogoproto/gogo.proto";
+
+option go_package = "nftmaker/x/nftmaker/types";
+
+// Params defines the parameters for the module.
+message Params {
+  option (gogoproto.goproto_stringer) = false;
+  
+}
