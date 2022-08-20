@@ -16,16 +16,15 @@ import {
 import { Text as TextInput, Select as SelectInput, SuspenseLoader } from 'src/components';
 import { ReactComponent as Success } from 'src/assets/minting_success.svg';
 import { providers, Contract } from 'ethers';
-import NFTMinter from '../../artifacts/contracts/NFTMinter.sol/NFTMinter.json';
 import { pinFileToIPFS } from 'src/utils/pinToIpfs';
 import generateUUID from 'src/utils/generateUUID';
 import contractAddress from 'src/constants/contractAddress';
 
-const provider = new providers.Web3Provider(window.ethereum);
+// const provider = new providers.Web3Provider(window.ethereum);
 // get the end user
-const signer = provider.getSigner();
+// const signer = provider.getSigner();
 // get the smart contract
-const contract = new Contract(contractAddress, NFTMinter.abi, signer);
+// const contract = new Contract(contractAddress, NFTMinter.abi, signer);
 
 export default function AddProductDialog(props) {
     const [selectedImage, setSelectedImage] = useState();
@@ -84,23 +83,9 @@ export default function AddProductDialog(props) {
 
     const mintNFT = async (metaDataUri) => {
         // make a connection between contract and signer
-        const connection = contract.connect(signer);
         // get wallet address of recipient
-        const walletAddress = connection.address;
-        setMinterWalletAddress(walletAddress);
-
         // call the pay to mint method on the smart contract
-        const result = await contract.mintNFT(walletAddress, metaDataUri);
-
-        console.log(result);
-
         // wait for result to be mined
-        await result.wait();
-
-        const tokenId = await contract.getCurrentTokenIdCounter();
-
-        console.log(tokenId._hex.toString());
-
         // OnSubmitFormHandler(tokenId._hex.toString());
         // setLoading(false);
         setIsMinted(true);
