@@ -16,13 +16,13 @@ function Home() {
                 <Grid item xs={12} md={8} xl={9}>
                     <Grid container rowSpacing={{ xs: 2, sm: 4 }} columnSpacing={{ xs: 2, sm: 4, xl: 4 }}>
                         <Grid item xs={6} xl={3}>
-                            <StatCard name="Total Products" stat="28" growth="Categories: 5" />
+                            <StatCard name="Total Products" stat="28" />
                         </Grid>
                         <Grid item xs={6} xl={3}>
-                            <StatCard name="Monthly Sales" stat="95" growth="+3.7%" />
+                            <StatCard name="Monthly Sales" stat="95" />
                         </Grid>
                         <Grid item xs={6} xl={3}>
-                            <StatCard name="Average Rating" stat="4.1" growth="+1.7%" />
+                            <StatCard name="My Followers" stat="41" />
                         </Grid>
                         <Grid item xs={6} xl={3}>
                             <StatCard name="NFT Sold" stat="17" />

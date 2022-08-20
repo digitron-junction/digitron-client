@@ -9,7 +9,7 @@ export default function Comment(props) {
             gap: 2
         }}>
             <Typography variant="h4">{props.author}</Typography>
-            <Rating value={props.rating} readOnly />
+            {props.rating && <Rating name="read-only" value={props.rating} readOnly />}
             <Typography variant="body1" mt={1}>{props.content}</Typography>
         </Stack>
     )

@@ -31,3 +31,6 @@ export { default as StatCard } from './visualizations/StatCard';
 export { default as Select } from './misc/Select';
 export { default as SuspenseLoader } from './misc/SuspenseLoader';
 export { default as Text } from './misc/Text';
+
+//@ts-ignore
+export { default as BuyerProfile } from './general/Profile';
