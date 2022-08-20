@@ -64,8 +64,8 @@ export const routes: Array<PartialRouteObject> = [
                 element: <Pages.Accounting />
             },
             {
-                path: 'analysis',
-                element: <Pages.StatusComingSoon />
+                path: 'add-product',
+                element: <Pages.AddProduct />
             },
             {
                 path: 'products',

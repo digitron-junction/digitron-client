@@ -25,3 +25,4 @@ export const Accounting = Loader('main/Accounting');
 export const Inventory = Loader('main/Inventory');
 export const Profile = Loader('main/Profile');
 export const Onboarding = Loader('main/Onboarding');
+export const AddProduct = Loader('main/AddProduct');
