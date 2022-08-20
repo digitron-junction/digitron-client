@@ -1,0 +1,14 @@
+syntax = "proto3";
+package minter.minter;
+
+import "gogoproto/gogo.proto";
+import "minter/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "minter/x/minter/types";
+
+// GenesisState defines the minter module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}

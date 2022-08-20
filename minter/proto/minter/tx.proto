@@ -1,0 +1,25 @@
+syntax = "proto3";
+package minter.minter;
+
+// this line is used by starport scaffolding # proto/tx/import
+
+option go_package = "minter/x/minter/types";
+
+// Msg defines the Msg service.
+service Msg {
+      rpc CreateNft(MsgCreateNft) returns (MsgCreateNftResponse);
+// this line is used by starport scaffolding # proto/tx/rpc
+}
+
+message MsgCreateNft {
+  string creator = 1;
+  string owner = 2;
+  string image = 3;
+  string createdAt = 4;
+}
+
+message MsgCreateNftResponse {
+  uint64 id = 1;
+}
+
+// this line is used by starport scaffolding # proto/tx/message
