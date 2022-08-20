@@ -14,6 +14,17 @@ service Msg {
 
 message Nft {
     bytes creator = 1;
-    bytes sender = 2;
-    bytes reciever = 3;
+    bytes nftHashID = 2;
+    uint64 createdAt = 3;
+}
+
+message MsgMintNft {
+    bytes sender = 1;
+    Nft nft = 2;
+}
+
+message MsgSendNft {
+    bytes sender = 1;
+    bytes receiver = 2;
+    Nft nft = 3;
 }

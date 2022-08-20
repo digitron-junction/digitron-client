@@ -21,5 +21,5 @@ address: stars14q2l3496jq6zlnp9y9lszw0td35ywn3rxzqvgy
 
 ```bash
 ignite generate proto-go # chain
-ignite generate vuex    #frontend
+ignite generate vuex    # frontend
 ```
