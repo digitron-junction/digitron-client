@@ -16,7 +16,7 @@ const (
 	// MemStoreKey defines the in-memory store key
 	MemStoreKey = "mem_nftmaker"
 
-	// Keep track of the index of nfts  
+	// Keep track of the index of nfts
 	NftKey      = "Nft-value-"
 	NftCountKey = "Nft-count-"
 )

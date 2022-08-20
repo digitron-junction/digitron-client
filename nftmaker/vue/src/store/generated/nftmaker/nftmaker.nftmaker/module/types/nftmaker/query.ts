@@ -13,6 +13,14 @@ export interface QueryParamsResponse {
   params: Params | undefined;
 }
 
+export interface QueryNftsRequest {}
+
+export interface QueryNftsResponse {
+  owner: string;
+  image: string;
+  createdAt: string;
+}
+
 const baseQueryParamsRequest: object = {};
 
 export const QueryParamsRequest = {
@@ -110,10 +118,139 @@ export const QueryParamsResponse = {
   },
 };
 
+const baseQueryNftsRequest: object = {};
+
+export const QueryNftsRequest = {
+  encode(_: QueryNftsRequest, writer: Writer = Writer.create()): Writer {
+    return writer;
+  },
+
+  decode(input: Reader | Uint8Array, length?: number): QueryNftsRequest {
+    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = { ...baseQueryNftsRequest } as QueryNftsRequest;
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        default:
+          reader.skipType(tag & 7);
+          break;
+      }
+    }
+    return message;
+  },
+
+  fromJSON(_: any): QueryNftsRequest {
+    const message = { ...baseQueryNftsRequest } as QueryNftsRequest;
+    return message;
+  },
+
+  toJSON(_: QueryNftsRequest): unknown {
+    const obj: any = {};
+    return obj;
+  },
+
+  fromPartial(_: DeepPartial<QueryNftsRequest>): QueryNftsRequest {
+    const message = { ...baseQueryNftsRequest } as QueryNftsRequest;
+    return message;
+  },
+};
+
+const baseQueryNftsResponse: object = { owner: "", image: "", createdAt: "" };
+
+export const QueryNftsResponse = {
+  encode(message: QueryNftsResponse, writer: Writer = Writer.create()): Writer {
+    if (message.owner !== "") {
+      writer.uint32(10).string(message.owner);
+    }
+    if (message.image !== "") {
+      writer.uint32(18).string(message.image);
+    }
+    if (message.createdAt !== "") {
+      writer.uint32(26).string(message.createdAt);
+    }
+    return writer;
+  },
+
+  decode(input: Reader | Uint8Array, length?: number): QueryNftsResponse {
+    const reader = input instanceof Uint8Array ? new Reader(input) : input;
+    let end = length === undefined ? reader.len : reader.pos + length;
+    const message = { ...baseQueryNftsResponse } as QueryNftsResponse;
+    while (reader.pos < end) {
+      const tag = reader.uint32();
+      switch (tag >>> 3) {
+        case 1:
+          message.owner = reader.string();
+          break;
+        case 2:
+          message.image = reader.string();
+          break;
+        case 3:
+          message.createdAt = reader.string();
+          break;
+        default:
+          reader.skipType(tag & 7);
+          break;
+      }
+    }
+    return message;
+  },
+
+  fromJSON(object: any): QueryNftsResponse {
+    const message = { ...baseQueryNftsResponse } as QueryNftsResponse;
+    if (object.owner !== undefined && object.owner !== null) {
+      message.owner = String(object.owner);
+    } else {
+      message.owner = "";
+    }
+    if (object.image !== undefined && object.image !== null) {
+      message.image = String(object.image);
+    } else {
+      message.image = "";
+    }
+    if (object.createdAt !== undefined && object.createdAt !== null) {
+      message.createdAt = String(object.createdAt);
+    } else {
+      message.createdAt = "";
+    }
+    return message;
+  },
+
+  toJSON(message: QueryNftsResponse): unknown {
+    const obj: any = {};
+    message.owner !== undefined && (obj.owner = message.owner);
+    message.image !== undefined && (obj.image = message.image);
+    message.createdAt !== undefined && (obj.createdAt = message.createdAt);
+    return obj;
+  },
+
+  fromPartial(object: DeepPartial<QueryNftsResponse>): QueryNftsResponse {
+    const message = { ...baseQueryNftsResponse } as QueryNftsResponse;
+    if (object.owner !== undefined && object.owner !== null) {
+      message.owner = object.owner;
+    } else {
+      message.owner = "";
+    }
+    if (object.image !== undefined && object.image !== null) {
+      message.image = object.image;
+    } else {
+      message.image = "";
+    }
+    if (object.createdAt !== undefined && object.createdAt !== null) {
+      message.createdAt = object.createdAt;
+    } else {
+      message.createdAt = "";
+    }
+    return message;
+  },
+};
+
 /** Query defines the gRPC querier service. */
 export interface Query {
   /** Parameters queries the parameters of the module. */
   Params(request: QueryParamsRequest): Promise<QueryParamsResponse>;
+  /** Queries a list of Nfts items. */
+  Nfts(request: QueryNftsRequest): Promise<QueryNftsResponse>;
 }
 
 export class QueryClientImpl implements Query {
@@ -125,6 +262,12 @@ export class QueryClientImpl implements Query {
     const data = QueryParamsRequest.encode(request).finish();
     const promise = this.rpc.request("nftmaker.nftmaker.Query", "Params", data);
     return promise.then((data) => QueryParamsResponse.decode(new Reader(data)));
+  }
+
+  Nfts(request: QueryNftsRequest): Promise<QueryNftsResponse> {
+    const data = QueryNftsRequest.encode(request).finish();
+    const promise = this.rpc.request("nftmaker.nftmaker.Query", "Nfts", data);
+    return promise.then((data) => QueryNftsResponse.decode(new Reader(data)));
   }
 }
 

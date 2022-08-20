@@ -19,6 +19,12 @@ export interface NftmakerMsgCreateNftResponse {
  */
 export type NftmakerParams = object;
 
+export interface NftmakerQueryNftsResponse {
+  owner?: string;
+  image?: string;
+  createdAt?: string;
+}
+
 /**
  * QueryParamsResponse is response type for the Query/Params RPC method.
  */
@@ -234,6 +240,22 @@ export class HttpClient<SecurityDataType = unknown> {
  * @version version not set
  */
 export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDataType> {
+  /**
+   * No description
+   *
+   * @tags Query
+   * @name QueryNfts
+   * @summary Queries a list of Nfts items.
+   * @request GET:/nftmaker/nftmaker/nfts
+   */
+  queryNfts = (params: RequestParams = {}) =>
+    this.request<NftmakerQueryNftsResponse, RpcStatus>({
+      path: `/nftmaker/nftmaker/nfts`,
+      method: "GET",
+      format: "json",
+      ...params,
+    });
+
   /**
    * No description
    *
