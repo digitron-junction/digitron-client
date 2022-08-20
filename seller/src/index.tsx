@@ -1,38 +1,25 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
+import { HelmetProvider } from 'react-helmet-async';
+import { BrowserRouter } from 'react-router-dom';
 
-// context
-import { GlobalProvider } from 'context/GlobalContext';
+// Importing all Providers
+import { UserProvider } from 'src/contexts/User';
+import { ThemeProvider } from 'src/theme';
 
-// stores
-import store from 'stores';
-
-// i18n
-import 'locales/i18n';
-
-// services
-import initRequest from 'services/initRequest';
-
-// components
 import App from './App';
 
-// styles
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-
-initRequest(store);
+import 'nprogress/nprogress.css';
 
 ReactDOM.render(
-  <Provider store={store}>
-    <GlobalProvider>
-      <App />
-    </GlobalProvider>
-  </Provider>,
-  document.getElementById('root'),
-);
+    <HelmetProvider>
+        <UserProvider>
+            <ThemeProvider>
+                <BrowserRouter>
+                    <App />
+                </BrowserRouter>
+            </ThemeProvider>
+        </UserProvider>
+    </HelmetProvider>,
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+    document.getElementById('root')
+);

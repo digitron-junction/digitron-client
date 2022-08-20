@@ -1,60 +1,40 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import { SnackbarProvider } from 'notistack';
+import { useContext, useEffect } from 'react';
+import { useRoutes, useNavigate } from 'react-router-dom';
+import { CssBaseline } from '@mui/material';
+// import AdapterDateFns from '@mui/lab/AdapterDateFns';
+// import LocalizationProvider from '@mui/lab/LocalizationProvider';
 
-// material core
-import { MuiThemeProvider } from '@material-ui/core/styles';
+import { routes } from './router';
+import { UserContext } from 'src/contexts/User';
+import { NoProvider } from './utils/errors';
 
-// context
-import { useGlobalContext } from 'context/GlobalContext';
+const App = () => {
+    // Fetch User Details
+    const user = useContext(UserContext);
+    if (!user) throw NoProvider('User Context');
 
-// containers
-import Auth from 'containers/Auth';
+    // Check if authenticated or not
+    // Redirect to login page if not authenticated
+    const navigate = useNavigate();
+    useEffect(() => {
+        if (user.isAuthenticated) {
+            navigate('/home');
+        } else {
+            navigate('/base/login');
+        }
+    }, [user.isAuthenticated]);
 
-// atomic
-import LinearProgress from 'components/atoms/LinearProgress';
-import Dialog from 'components/molecules/Dialog';
-import SnackBarBase from 'components/molecules/SnackBar';
+    // Get the current route to display
+    const currentRoute = useRoutes(routes);
 
-// themes
-import themes from 'themes';
-import { THEMES } from 'configs';
-
-// routes
-import Routes from 'routes/Routes';
-
-function App() {
-  // 0: light, 1: dark
-  const { i18n } = useTranslation();
-  const { modeTheme, language } = useGlobalContext();
-  const type = modeTheme === THEMES.LIGHT ? 0 : 1;
-
-  useEffect(() => {
-    i18n.changeLanguage(language);
-  }, [language, i18n]);
-
-  return (
-    <MuiThemeProvider theme={themes(type)}>
-      <Router>
-        <Auth>
-          <SnackbarProvider
-            autoHideDuration={process.env.REACT_APP_AUTO_HIDE_SNACKBAR || 3000}
-            anchorOrigin={{
-              vertical: 'bottom',
-              horizontal: 'center',
-            }}
-            maxSnack={process.env.REACT_APP_MAX_SNACKBAR || 3}
-          >
-            <LinearProgress />
-            <Dialog />
-            <Routes />
-            <SnackBarBase />
-          </SnackbarProvider>
-        </Auth>
-      </Router>
-    </MuiThemeProvider>
-  );
-}
+    return (
+        <>
+            {/* <LocalizationProvider dateAdapter={AdapterDateFns}> */}
+            <CssBaseline />
+            {currentRoute}
+            {/* </LocalizationProvider> */}
+        </>
+    );
+};
 
 export default App;

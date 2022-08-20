@@ -1,0 +1,49 @@
+.horizontal-scroll-list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 2em;
+}
+
+.horizontal-scroll-list .navigator {
+    font-size: 1.5em;
+    transition: all 0.2s;
+}
+
+.horizontal-scroll-list .navigator.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.horizontal-scroll-list .list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    gap: 1em;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.horizontal-scroll-list .list::-webkit-scrollbar {
+    display: none;
+}
+
+.horizontal-scroll-list * {
+    flex-shrink: 0;
+}
+
+@media (max-width: 400px) {
+    .horizontal-scroll-list .navigator {
+        display: none;
+    }
+
+    .horizontal-scroll-list .list {
+        overflow-x: auto;
+    }
+}

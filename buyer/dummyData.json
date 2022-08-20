@@ -1,0 +1,338 @@
+[
+ {
+   "productCategory": "Shawls",
+   "productName": "Pashmina Shawls",
+   "productMRP": 15880,
+   "productSP": 15000,
+   "productImg": "https://5.imimg.com/data5/SU/VP/MY-779056/pashmina-shawls-500x500.jpg"
+ },
+ {
+   "productCategory": "Shawls",
+   "productName": "Naga Shawl",
+   "productMRP": 1700,
+   "productSP": 1200,
+   "productImg": "https://m.media-amazon.com/images/I/91VwcIfyYGL._UL1500_.jpg"
+ },
+ {
+   "productCategory": "Shawls",
+   "productName": "Rabari Shawl",
+   "productMRP": 5900,
+   "productSP": 5000,
+   "productImg": "https://m.media-amazon.com/images/I/81R0HX320GL._UL1500_.jpg"
+ },
+ {
+   "productCategory": "carpet",
+   "productName": "Cut loop carpet",
+   "productMRP": 990,
+   "productSP": 670,
+   "productImg": "https://images-eu.ssl-images-amazon.com/images/I/61WVgNkLzmS._SX300_SY300_QL70_FMwebp_.jpg"
+ },
+ {
+   "productCategory": "carpet",
+   "productName": "Shag carpet",
+   "productMRP": 900,
+   "productSP": 400,
+   "productImg": "https://images-eu.ssl-images-amazon.com/images/I/61A8IHK8BWS._SX300_SY300_QL70_FMwebp_.jpg"
+ },
+ {
+   "productCategory": "carpet",
+   "productName": "Plush pile",
+   "productMRP": 900,
+   "productSP": 500,
+   "productImg": "https://m.media-amazon.com/images/I/71u637YqCxL._SX679_.jpg"
+ },
+ {
+   "productCategory": "carpet",
+   "productName": "Polyester carpet",
+   "productMRP": 550,
+   "productSP": 250,
+   "productImg": "https://images-eu.ssl-images-amazon.com/images/I/51OSCUP7VEL._SX300_SY300_QL70_FMwebp_.jpg"
+ },
+ {
+   "productCategory": "Glass Craft",
+   "productName": "COLD GLASS",
+   "productMRP": 8000,
+   "productSP": 7000,
+   "productImg": "https://newbeautifulera.files.wordpress.com/2015/08/0jackstorms005.jpg"
+ },
+ {
+   "productCategory": "Wooden Craft",
+   "productName": "Kondapalli Toys",
+   "productMRP": 750,
+   "productSP": 350,
+   "productImg": "https://m.media-amazon.com/images/I/71L-ihLW2nL._SX679_.jpg"
+ },
+ {
+   "productCategory": "Wooden Craft",
+   "productName": "Bidriware",
+   "productMRP": 570,
+   "productSP": 370,
+   "productImg": "https://static.toiimg.com/thumb/imgsize-866766,msid-68102322,width-400,resizemode-4/68102322.jpg"
+ },
+ {
+   "productCategory": "Wooden Craft",
+   "productName": "Thanjavur Doll",
+   "productMRP": 700,
+   "productSP": 400,
+   "productImg": "https://images-eu.ssl-images-amazon.com/images/I/41JEnCV-f1L._SX300_SY300_QL70_FMwebp_.jpg"
+ },
+ {
+   "productCategory": "string Puppet",
+   "productName": "Kathputli",
+   "productMRP": 190,
+   "productSP": 120,
+   "productImg": "https://m.media-amazon.com/images/I/61mueyOyYOL._SX679_.jpg"
+ },
+ {
+   "productCategory": "handicrafts",
+   "productName": "Dhokra",
+   "productMRP": 2700,
+   "productSP": 2300,
+   "productImg": "https://m.media-amazon.com/images/I/61GH2xcUrnL._SX679_.jpg"
+ },
+ {
+   "productCategory": "soft wood toys",
+   "productName": "Nirmal Toys and Craft",
+   "productMRP": 999,
+   "productSP": 990,
+   "productImg": "https://sahasahobbyistmagazine.files.wordpress.com/2020/08/nirmal-1.jpg"
+ },
+ {
+   "productCategory": "bamboo craft",
+   "productName": "Cane and Bamboo Crafts",
+   "productMRP": 899,
+   "productSP": 890,
+   "productImg": "https://m.media-amazon.com/images/I/81lSniMJslL._SY879_.jpg"
+ },
+ {
+   "productCategory": "Inlay works ",
+   "productName": "Mysore Rosewood Inlay",
+   "productMRP": 550,
+   "productSP": 454,
+   "productImg": "https://i.ytimg.com/vi/atAiGQ3_To8/sddefault.jpg"
+ },
+ {
+   "productCategory": "Wooden Craft",
+   "productName": "Bastar Iron and Wooden Craft",
+   "productMRP": 1400,
+   "productSP": 999,
+   "productImg": "https://www.gitagged.com/wp-content/uploads/2017/12/Bastar-Art-Online-GI-TAGGED-1.jpg"
+ },
+ {
+   "productCategory": "artifact",
+   "productName": "Thanjavur Art Plate",
+   "productMRP": 1200,
+   "productSP": 1000,
+   "productImg": "https://www.gitagged.com/wp-content/uploads/2018/07/GiTAGGED-Lakshmi-Tri-Metal-Art-Online-1.jpg"
+ },
+ {
+   "productCategory": "idols and statues",
+   "productName": "Swamimalai Bronze Icons",
+   "productMRP": 333,
+   "productSP": 233,
+   "productImg": "https://www.shoppingkart24.com/image/cachewebp/catalog/Siva%20arts%20and%20crafts/g-500x660.webp"
+ },
+ {
+   "productCategory": "painted wood furniture",
+   "productName": "Sankheda Furniture",
+   "productMRP": 445,
+   "productSP": 345,
+   "productImg": "https://5.imimg.com/data5/PG/SA/MY-16428351/wooden-sofa-set-500x500.jpg"
+ },
+ {
+   "productCategory": "pottery",
+   "productName": "Khurja Pottery",
+   "productMRP": 1200,
+   "productSP": 990,
+   "productImg": "https://d2gt5azlc10ehh.cloudfront.net/news/wp-content/uploads/2019/06/30TY_KHURJA_POTTERY.jpg"
+ },
+ {
+   "productCategory": "handicrafts",
+   "productName": "Villianur Terracotta Works",
+   "productMRP": 777,
+   "productSP": 590,
+   "productImg": "https://d2gt5azlc10ehh.cloudfront.net/news/wp-content/uploads/2019/06/14107869_1043208709124742_1377440306789650039_o.jpg"
+ },
+ {
+   "productCategory": "stone carving",
+   "productName": "Konark Stone Carving",
+   "productMRP": 8945,
+   "productSP": 8045,
+   "productImg": "https://m.media-amazon.com/images/I/71UKShI1tkL._SX679_.jpg"
+ },
+ {
+   "productCategory": "pottery",
+   "productName": "Jaipur Blue Pottery",
+   "productMRP": 860,
+   "productSP": 760,
+   "productImg": "http://www.maverickbird.com/wp-content/uploads/2019/05/28699208_2087662244584145_2124620910877142863_o-759x480.jpg"
+ },
+ {
+   "productCategory": "artifacts",
+   "productName": "Coconut Shell Craft",
+   "productMRP": 690,
+   "productSP": 490,
+   "productImg": "https://scontent.fbom3-2.fna.fbcdn.net/v/t1.6435-9/70225686_1873540449415789_1176125232927211520_n.jpg?stp=cp0_dst-jpg_e15_q65_s320x320&_nc_cat=107&ccb=1-5&_nc_sid=dd9801&_nc_ohc=J3mQzrdy7eAAX97ELFc&_nc_ht=scontent.fbom3-2.fna&oh=00_AT87Ajd-d1ynX9opPWFKtctx954jRKtCpbb-XKBPm4KEbQ&oe=62627B60"
+ },
+ {
+   "productCategory": "brass craft",
+   "productName": "Budithi Bell and Brass Craft",
+   "productMRP": 1800,
+   "productSP": 1000,
+   "productImg": "https://srikakulamads.com/wp-content/uploads/2020/12/Buditi-Bell-and-Brass-Craft.png"
+ },
+ {
+   "productCategory": "baamboo craft",
+   "productName": "Bamboo Work",
+   "productMRP": 970,
+   "productSP": 770,
+   "productImg": "https://ccicraft.s3.ap-south-1.amazonaws.com/wp-content/uploads/Bamboo-Work-495x321.jpg"
+ },
+ {
+   "productCategory": "pottery",
+   "productName": "Longpi Coiled Pottery",
+   "productMRP": 2000,
+   "productSP": 1000,
+   "productImg": "http://www.craftandartisans.com/sites/default/files/Coiled%20Pottery%20Soap%20Dispenser.JPG"
+ },
+ {
+   "productCategory": "baamboo craft",
+   "productName": "Kamrupi Crafts",
+   "productMRP": 6500,
+   "productSP": 6000,
+   "productImg": "https://i0.wp.com/www.hisour.com/wp-content/uploads/2018/03/South-India-Metal-Ware-Salar-Jung-Museum.jpg"
+ },
+ {
+   "productCategory": "Marble Art",
+   "productName": "Agra Marble Art",
+   "productMRP": 17000,
+   "productSP": 10000,
+   "productImg": "https://www.dsource.in/sites/default/files/gallery/17622/3.jpg"
+ },
+ {
+   "productCategory": "wooden craft",
+   "productName": "Saharanpur Wood Crafts",
+   "productMRP": 5310,
+   "productSP": 5010,
+   "productImg": "https://www.dsource.in/sites/default/files/gallery/17635/3.jpg"
+ },
+ {
+   "productCategory": "metal art",
+   "productName": "Pembarthi Metal Craft",
+   "productMRP": 4300,
+   "productSP": 4000,
+   "productImg": "https://www.dsource.in/sites/default/files/resource/sheet-embossing-pembarthi/logo/170-a.jpg"
+ },
+ {
+   "productCategory": "shell craft",
+   "productName": "Sea Shell Crafts",
+   "productMRP": 999,
+   "productSP": 990,
+   "productImg": "https://www.dsource.in/sites/default/files/resource/seashell-craft-puri-orissa/logo/170.jpg"
+ },
+ {
+   "productCategory": "handicrafts",
+   "productName": "Pipli Applique Work",
+   "productMRP": 590,
+   "productSP": 560,
+   "productImg": "https://www.deccanherald.com/sites/dh/files/article_images/2012/01/28/handicraft.jpg"
+ },
+ {
+   "productCategory": "paintings",
+   "productName": "Rogan Printing",
+   "productMRP": 2740,
+   "productSP": 2340,
+   "productImg": "https://amounee-prod.s3.ap-south-1.amazonaws.com/wp-content/uploads/2019/04/18111034/PAT01903.jpg"
+ },
+ {
+   "productCategory": "footwear",
+   "productName": "Jutti",
+   "productMRP": 300,
+   "productSP": 200,
+   "productImg": "https://cdn.shopify.com/s/files/1/2129/8197/products/a61290b54547c36e7bb69454b62d309793afa054.png?v=1577382718"
+ },
+ {
+   "productCategory": "musical instruments",
+   "productName": "Ravanahatha",
+   "productMRP": 430,
+   "productSP": 230,
+   "productImg": "https://m.media-amazon.com/images/I/71P7sjYYfXL._SX679_.jpg"
+ },
+ {
+   "productCategory": "handicrafts",
+   "productName": "Patravali",
+   "productMRP": 30,
+   "productSP": 10,
+   "productImg": "https://m.media-amazon.com/images/I/61SmB+tvB3L._SX679_.jpg"
+ },
+ {
+   "productCategory": "footwear",
+   "productName": "Kolhapuri Chappal",
+   "productMRP": 450,
+   "productSP": 250,
+   "productImg": "https://m.media-amazon.com/images/I/81rTC7PqvOL._UX625_.jpg"
+ },
+ {
+   "productCategory": "shell crafts",
+   "productName": "shell crafts",
+   "productMRP": 600,
+   "productSP": 100,
+   "productImg": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F34%2F2021%2F07%2F08%2Fwhite-shells-d107462-0811.jpeg&w=200&c=sc&poi=face&q=60"
+ },
+ {
+   "productCategory": "brass craft",
+   "productName": "Brass Handicrafts",
+   "productMRP": 5700,
+   "productSP": 5000,
+   "productImg": "https://boontoon.b-cdn.net//assets/images/catalog-product/decorative-brass-metal-mahatma-buddha-face-statue_bh-0198.jpg"
+ },
+ {
+   "productCategory": "Baamboo handicraft",
+   "productName": "assami Bamboo Handicrafts",
+   "productMRP": 940,
+   "productSP": 740,
+   "productImg": "https://m.media-amazon.com/images/I/71gjIYrPl4L._SX679_.jpg"
+ },
+ {
+   "productCategory": "embroidery work ",
+   "productName": "Phulkaris",
+   "productMRP": 3900,
+   "productSP": 3400,
+   "productImg": "https://m.media-amazon.com/images/I/91mXFRZzNDL._UL1500_.jpg"
+ },
+ {
+   "productCategory": "embroidery work ",
+   "productName": "Zardozi",
+   "productMRP": 2822,
+   "productSP": 2222,
+   "productImg": "https://4.imimg.com/data4/UJ/NM/MY-203127/zardozi-embroidery-500x500.jpg"
+ },
+ {
+   "productCategory": "embroidery work ",
+   "productName": "Saris and Silk",
+   "productMRP": 5090,
+   "productSP": 5000,
+   "productImg": "https://www.fabfunda.com/product-img/soft-lichi-silk-saree-1607425837.jpeg"
+ },
+ {
+   "productCategory": "carpet",
+   "productName": "Carpet Weaving",
+   "productMRP": 1000,
+   "productSP": 907,
+   "productImg": "https://encyclocraftsapr.com/wp-content/uploads/2018/08/Woven-carpet-Takyr-gilyam-1960-Surkhandapiya-province.jpg"
+ },
+ {
+   "productCategory": "handmade mirror",
+   "productName": "Aranmula Kannadi",
+   "productMRP": 445,
+   "productSP": 345,
+   "productImg": "https://5.imimg.com/data5/SELLER/Default/2021/4/LV/CQ/UL/8047838/aranmula-kannadi-500x500.jpg"
+ },
+ {
+   "productCategory": "wooden craft",
+   "productName": "Channapatna Toys",
+   "productMRP": 130,
+   "productSP": 100,
+   "productImg": "https://images.livemint.com/rf/Image-621x414/LiveMint/Period1/2013/04/20/Photos/DSC_9462[1]--621x414.jpg"
+ }
+]
