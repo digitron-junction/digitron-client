@@ -95,6 +95,7 @@ function Profile() {
                             </Stack>
                         </Grid>
                     </Grid>
+                    <Box pb={40}></Box>
                 </Container>
             </Card>
         </>

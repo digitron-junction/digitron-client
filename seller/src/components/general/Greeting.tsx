@@ -10,7 +10,7 @@ export default function Greeting(props: GreetingProps) {
             <Avatar alt="Hello" src={props.photo} sx={{ width: 54, height: 54 }} />
             <Stack>
                 <Typography variant="h1">Hello, Artist</Typography>
-                <Typography variant="subtitle1">Welcome to 3Commerce</Typography>
+                <Typography variant="subtitle1">Welcome to Junction Asia 2022</Typography>
             </Stack>
         </Stack>
     );

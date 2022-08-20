@@ -41,7 +41,7 @@ const products = [
         rating: 5,
         price: '₹ 8799',
         discountedPrice: '₹ 8699',
-        mintedNFT: true
+        mintedNFT: false
     },
     {
         name: 'Oriental Design Rug',
@@ -50,7 +50,7 @@ const products = [
         rating: 4,
         price: '₹ 7699',
         discountedPrice: '₹ 7499',
-        mintedNFT: true
+        mintedNFT: false
     },
     {
         name: 'Silk Rug',
@@ -59,7 +59,7 @@ const products = [
         rating: 5,
         price: '₹ 9699',
         discountedPrice: '₹ 8499',
-        mintedNFT: true
+        mintedNFT: false
     }
 ];
 

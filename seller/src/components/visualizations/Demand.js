@@ -158,7 +158,7 @@ export default function Demand() {
     ];
 
     return (
-        <SectionCard title="Demand">
+        <SectionCard title="Product Likes">
             <Stack direction="row" alignItems="center" justifyContent="space-around">
                 <Stack gap={2}>
                     <List disablePadding>

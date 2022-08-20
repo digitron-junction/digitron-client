@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { Card, CardContent, Container, Grid, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Card, CardContent, Container, Grid, useMediaQuery, useTheme } from '@mui/material';
 
 import { Sales, Demand, Demand2, StatCard, SentimentalCommentBox, ProjectedSales } from 'src/components';
 
@@ -12,9 +12,9 @@ function Home() {
             <Helmet>
                 <title>3 Commerce Dashboard</title>
             </Helmet>
-            <Grid container direction="row" justifyContent="center" spacing={{ xs: 4, xl: 7 }}>
+            <Grid container direction="row" justifyContent="center" spacing={{ xs: 4, xl: 6 }}>
                 <Grid item xs={12} md={8} xl={9}>
-                    <Grid container rowSpacing={{ xs: 2, sm: 4 }} columnSpacing={{ xs: 2, sm: 4, xl: 7 }}>
+                    <Grid container rowSpacing={{ xs: 2, sm: 4 }} columnSpacing={{ xs: 2, sm: 4, xl: 4 }}>
                         <Grid item xs={6} xl={3}>
                             <StatCard name="Total Products" stat="28" growth="Categories: 5" />
                         </Grid>
@@ -35,9 +35,7 @@ function Home() {
                         <Grid item xs={12}>
                             <Sales />
                         </Grid>
-                        <Grid item xs={12}>
-                            <ProjectedSales />
-                        </Grid>
+                        <Box pb={120}></Box>
                     </Grid>
                 </Grid>
                 <Grid item xs={12} md={4} xl={3}>

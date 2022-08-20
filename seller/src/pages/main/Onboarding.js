@@ -25,7 +25,7 @@ export default function Onboarding() {
         >
             <Card>
                 <CardContent>
-                    <Typography variant="h3">Welcome to 3Commerce</Typography>
+                    <Typography variant="h3">Welcome to Junction Asia 2022</Typography>
                     <Typography variant="body1" mt={1}>
                         Let's set up your profile
                     </Typography>

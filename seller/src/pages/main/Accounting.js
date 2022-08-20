@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-import { List, Container, Grid, Card, CardHeader, CardContent, Divider, Typography } from '@mui/material';
-import { ProductListItem, SectionCard, FAQ, Wallet } from 'src/components';
+import { List, Container, Grid, Card, CardHeader, CardContent, Divider, Typography, Box } from '@mui/material';
+import { ProductListItem, SectionCard, FAQ, Wallet, OrderListItem } from 'src/components';
 
 const products = [
     {
@@ -29,15 +29,16 @@ export default function Accounting() {
     return (
         <>
             <Helmet>
-                <title>Accounting</title>
+                <title>My Orders</title>
             </Helmet>
             <Container maxWidth="xl">
                 <Grid container direction="row" justifyContent="center" spacing={{ xs: 4, xl: 7 }}>
                     <Grid item xs={12} md={8} xl={9}>
                         <Grid container rowSpacing={4} columnSpacing={{ xs: 4, xl: 7 }}>
                             <Grid item xs={12}>
-                                <SectionCard title="NFT Products">
-                                    <List>
+                                <SectionCard title="My Orders  ">
+                                    <OrderListItem />
+                                    {/* <List>
                                         {products.map((product, index) => (
                                             <ProductListItem
                                                 key={index}
@@ -51,26 +52,7 @@ export default function Accounting() {
                                                 sideTxt="NFT ID goes here"
                                             />
                                         ))}
-                                    </List>
-                                </SectionCard>
-                            </Grid>
-                            <Grid item xs={12}>
-                                <SectionCard title="Sold NFT">
-                                    <List>
-                                        {products.map((product, index) => (
-                                            <ProductListItem
-                                                key={index}
-                                                name={product.name}
-                                                photo={product.img}
-                                                rating={product.rating}
-                                                desc={product.desc}
-                                                price={product.price}
-                                                mintedNFT={product.mintedNFT}
-                                                discountedPrice={product.discountedPrice}
-                                                sideTxt="NFT ID goes here"
-                                            />
-                                        ))}
-                                    </List>
+                                    </List> */}
                                 </SectionCard>
                             </Grid>
                         </Grid>
@@ -86,6 +68,7 @@ export default function Accounting() {
                         </Grid>
                     </Grid>
                 </Grid>
+                <Box pb={50}></Box>
             </Container>
         </>
     );

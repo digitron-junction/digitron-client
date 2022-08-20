@@ -60,7 +60,7 @@ export const routes: Array<PartialRouteObject> = [
                 element: <Pages.Home />
             },
             {
-                path: 'accounting',
+                path: 'orders',
                 element: <Pages.Accounting />
             },
             {
@@ -68,7 +68,7 @@ export const routes: Array<PartialRouteObject> = [
                 element: <Pages.StatusComingSoon />
             },
             {
-                path: 'inventory',
+                path: 'products',
                 element: <Pages.Inventory />
             },
             {

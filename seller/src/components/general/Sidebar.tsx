@@ -26,20 +26,16 @@ const navItems = [
         icon: PersonIcon
     },
     {
-        name: 'Inventory',
-        link: '/inventory',
+        name: 'Products',
+        link: '/products',
         icon: InventoryIcon
     },
     {
-        name: 'Insights',
-        link: '/insights',
-        icon: InsightsIcon
-    },
-    {
-        name: 'Accounting',
-        link: '/accounting',
+        name: 'Orders',
+        link: '/orders',
         icon: AccountBalanceWalletIcon
-    }
+    },
+    
 ];
 
 // ------------------------------------------------------------------------------------------------
@@ -52,6 +48,10 @@ const SidebarButton = styled(Button)(
 		transition: none;
 
 		&:hover, &.active {
+			background: linear-gradient(90deg, ${theme.palette.primary.main} 1.49%, ${theme.palette.primary.light} 100%);
+			color: white;
+		}
+        &.active {
 			background: linear-gradient(90deg, ${theme.palette.primary.main} 1.49%, ${theme.palette.primary.light} 100%);
 			color: white;
 		}

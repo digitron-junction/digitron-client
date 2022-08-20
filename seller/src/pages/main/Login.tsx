@@ -24,7 +24,7 @@ function Overview() {
     return (
         <OverviewWrapper>
             <Helmet>
-                <title>Login to 3Commerce</title>
+                <title>Login</title>
             </Helmet>
             <Container maxWidth="lg">
                 <Card

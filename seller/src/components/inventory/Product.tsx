@@ -21,7 +21,7 @@ export default function ProductListItem(props: ProductProps) {
             <Grid container spacing={2} sx={{ ml: 1 }}>
                 <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
                     <Typography variant="h4">{props.name}</Typography>
-                    <Typography variant="body1">{props.desc}</Typography>
+                    <Typography variant="h6">{props.desc}</Typography>
                     <Rating
                         value={props.rating}
                         precision={0.5}
@@ -29,7 +29,7 @@ export default function ProductListItem(props: ProductProps) {
                         icon={<Star color="primary" sx={{ fontSize: 32 }} />}
                         emptyIcon={<Star sx={{ color: '#C4C4C4', fontSize: 32 }} />}
                     />
-                    <Typography variant="h5">{props.price}</Typography>
+                    <Typography variant="h5">${props.price}</Typography>
                 </Grid>
                 <Grid
                     item
@@ -52,25 +52,20 @@ export default function ProductListItem(props: ProductProps) {
                             </IconButton>
                         </Stack>
                     )}
-                    {props.sideTxt && (
-                        <Typography variant="body1" mb={1}>
-                            {props.sideTxt}
-                        </Typography>
-                    )}
                     <Button
                         variant="contained"
-                        color={props.mintedNFT ? 'success' : 'error'}
+                        color={'success'}
                         size="small"
                         sx={{
-                            width: { xs: '50%', sm: '30%' },
-                            color: (theme) => theme.palette[props.mintedNFT ? 'success' : 'error'].dark,
-                            backgroundColor: (theme) => theme.palette[props.mintedNFT ? 'success' : 'error'].main,
+                            width: { xs: '100%', sm: '50%' },
+                            color: 'white',
+                            backgroundColor: (theme) => theme.palette['success'].main,
                             p: (theme) => theme.spacing(1, 2),
                             borderRadius: 2,
                             textAlign: 'center'
                         }}
                     >
-                        {props.mintedNFT ? 'Minted NFT' : 'No NFT Minted'}
+                        {props.mintedNFT ? 'Minted NFT' : 'Mint NFT'}
                     </Button>
                 </Grid>
             </Grid>

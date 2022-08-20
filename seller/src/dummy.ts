@@ -3,14 +3,14 @@ export const sessionData: SessionData = {
 };
 
 export const userProfile: UserProfile = {
-    name: 'Kanye West',
-    type: 'Jesus',
-    photo: 'https://images.yourstory.com/cs/wordpress/2013/06/Women1.jpg'
+    name: 'Harshal Dave',
+    type: 'Poter',
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwStw05Bi15rPkEjxsJnMxBMcQWLCLv0ZHRg&usqp=CAU'
 };
 
 export const messages: Array<Message> = [
     {
-        title: 'Welcome to 3Commerce!'
+        title: 'Welcome to Junction Asia 2022!'
     },
     {
         title: 'Kanye loves you!',
