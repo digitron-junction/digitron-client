@@ -9,6 +9,8 @@
  * ---------------------------------------------------------------
  */
 
+export type NftminterMsgMintNftResponse = object;
+
 /**
  * Params defines the parameters for the module.
  */
