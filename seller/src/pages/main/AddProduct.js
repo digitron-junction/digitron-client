@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 import {
@@ -22,8 +22,6 @@ import {
     ListItemText
 } from '@mui/material';
 import { PersonalDetailsForm, AddressDetailsForm, ArtistDetailsForm } from 'src/components';
-import { Text as TextInput, Select as SelectInput } from 'src/components';
-
 
 import { ReactComponent as InstagramIcon } from 'src/assets/icons/instagram.svg';
 import { ReactComponent as FacebookIcon } from 'src/assets/icons/facebook.svg';
@@ -35,13 +33,37 @@ function Profile() {
         img: 'https://images.yourstory.com/cs/wordpress/2013/06/Women1.jpg'
     };
 
-    const formValues = useRef({});
+    useEffect(() => {
+        (async () => {
+            if (!window.keplr) {
+                alert('Please install keplr extension');
+            } else {
+                const chainId = 'cosmoshub-4';
 
-    const handleChange = (key, value) => {
-        formValues.current[key] = value;
-        console.log(formValues.current);
-        onFormValuesChange(formValues.current);
-    };
+                // Enabling before using the Keplr is recommended.
+                // This method will ask the user whether to allow access if they haven't visited this website.
+                // Also, it will request that the user unlock the wallet if the wallet is locked.
+                await window.keplr.enable(chainId);
+
+                const offlineSigner = window.keplr.getOfflineSigner(chainId);
+
+                // You can get the address/public keys by `getAccounts` method.
+                // It can return the array of address/public key.
+                // But, currently, Keplr extension manages only one address/public key pair.
+                // XXX: This line is needed to set the sender address for SigningCosmosClient.
+                const accounts = await offlineSigner.getAccounts();
+
+                // Initialize the gaia api with the offline signer that is injected by Keplr extension.
+                const cosmJS = new SigningCosmosClient(
+                    'https://lcd-cosmoshub.keplr.app',
+                    accounts[0].address,
+                    offlineSigner
+                );
+            }
+        })();
+
+        return () => { };
+    }, []);
 
     return (
         <>
@@ -53,9 +75,38 @@ function Profile() {
                     <Grid container direction="row" spacing={4}>
                         <Grid item xs={12} md={3}>
                             <Stack alignItems="center" gap={2}>
-                                <Avatar src={profileData.img} sx={{ width: 200, height: 200 }} />
-                                <Typography variant="h4">Your Avatar</Typography>
-                                
+                                <Hidden mdDown>
+                                    <List>
+                                        <ListItem>
+                                            <ListItemIcon>
+                                                {' '}
+                                                <InstagramIcon width={70} height={70} />{' '}
+                                            </ListItemIcon>
+                                            <ListItemText> Instagram ID </ListItemText>
+                                        </ListItem>
+                                        <ListItem>
+                                            <ListItemIcon>
+                                                {' '}
+                                                <FacebookIcon width={70} height={70} />{' '}
+                                            </ListItemIcon>
+                                            <ListItemText> Facebook ID </ListItemText>
+                                        </ListItem>
+                                        <ListItem>
+                                            <ListItemIcon>
+                                                {' '}
+                                                <PinterestIcon width={70} height={70} />{' '}
+                                            </ListItemIcon>
+                                            <ListItemText> Pinterest ID </ListItemText>
+                                        </ListItem>
+                                        <ListItem>
+                                            <ListItemIcon>
+                                                {' '}
+                                                <TwitterIcon width={70} height={70} />{' '}
+                                            </ListItemIcon>
+                                            <ListItemText> Twitter ID </ListItemText>
+                                        </ListItem>
+                                    </List>
+                                </Hidden>
                                 <Hidden mdUp>
                                     <Stack direction="row" gap={3}>
                                         <InstagramIcon width={70} height={70} />
@@ -68,23 +119,9 @@ function Profile() {
                         </Grid>
                         <Grid item xs={12} md={9}>
                             <Stack direction="column" gap={5}>
-                                <Grid container rowSpacing={4} columnSpacing={3}>
-                                    <Grid item xs={6}>
-                                        <TextInput label="Name" onChange={(val) => handleChange('prodName', val)} color={"red"} />
-                                    </Grid>
-                                    <Grid item xs={6}>
-                                        <TextInput label="Price" onChange={(val) => handleChange('lastName', val)} />
-                                    </Grid>
-                                    <Grid item xs={12}>
-                                        <TextInput label="Email" onChange={(val) => handleChange('email', val)} />
-                                    </Grid>
-                                    <Grid item xs={6}>
-                                        <TextInput label="Date of birth" onChange={(val) => handleChange('dateOfBirth', val)} />
-                                    </Grid>
-                                    <Grid item xs={6}>
-                                        <TextInput label="Phone Number" onChange={(val) => handleChange('phoneNumber', val)} />
-                                    </Grid>
-                                </Grid>
+                                <PersonalDetailsForm />
+                                <ArtistDetailsForm />
+                                <AddressDetailsForm />
                             </Stack>
                         </Grid>
                     </Grid>
