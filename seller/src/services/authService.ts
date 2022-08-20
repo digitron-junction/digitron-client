@@ -5,14 +5,13 @@ class AuthService {
     this.setSession('accessToken', accessToken);
   };
 
-  loginWithAuth0 = async (username: string, roleUser: string) => {
+  loginWithAuth0 = async (username: string) => {
     const accessToken = '1929312831903129321';
     this.setSession('accessToken', accessToken);
-    const userStringify = JSON.stringify({ username, roleUser });
+    const userStringify = JSON.stringify({ username });
     this.setSession('user', userStringify);
     return {
       user: username,
-      role: roleUser,
     };
   };
 
