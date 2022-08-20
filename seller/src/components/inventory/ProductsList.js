@@ -39,8 +39,8 @@ const products = [
         desc: 'Hand Knotted Silk Carpet. The pattern and colours are easy to coordinate with many different styles.',
         img: '/static/images/carpets/Antique-White-hand-knotted-silk-carpet.jpeg',
         rating: 5,
-        price: '₹ 8799',
-        discountedPrice: '₹ 8699',
+        price: '$ 8799',
+        discountedPrice: '$ 8699',
         mintedNFT: false
     },
     {
@@ -48,8 +48,8 @@ const products = [
         desc: 'Hand Knotted Kashmiri Carpet. The dense, thick pile dampens sound and provides a soft surface to walk on.',
         img: '/static/images/carpets/oriental-design-rug.png',
         rating: 4,
-        price: '₹ 7699',
-        discountedPrice: '₹ 7499',
+        price: '$ 7699',
+        discountedPrice: '$ 7499',
         mintedNFT: false
     },
     {
@@ -57,8 +57,8 @@ const products = [
         desc: 'Hand Knotted Kashmiri Carpet. Designed in Persian Ardadil style.',
         img: '/static/images/carpets/persian-ardabil.jpeg',
         rating: 5,
-        price: '₹ 9699',
-        discountedPrice: '₹ 8499',
+        price: '$ 9699',
+        discountedPrice: '$ 8499',
         mintedNFT: false
     }
 ];
