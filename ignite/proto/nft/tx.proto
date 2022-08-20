@@ -1,0 +1,18 @@
+syntax = "proto3";
+package ignite.nft;
+
+// this line is used by starport scaffolding # proto/tx/import
+
+option go_package = "ignite/x/nft/types";
+
+// Msg defines the Msg service.
+service Msg {
+    // this line is used by starport scaffolding # proto/tx/rpc
+}
+
+// this line is used by starport scaffolding # proto/tx/message
+
+message Nft {
+    bytes hashid = 1;
+    
+}

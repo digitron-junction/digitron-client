@@ -14,7 +14,7 @@ import {
     IconButton
 } from '@mui/material';
 import { Text as TextInput, Select as SelectInput, SuspenseLoader } from 'src/components';
-import { ReactComponent as Success } from 'src/assets/minting_success.svg';
+// import { ReactComponent as Success } from 'src/assets/minting_success.svg';
 import { providers, Contract } from 'ethers';
 import { pinFileToIPFS } from 'src/utils/pinToIpfs';
 import generateUUID from 'src/utils/generateUUID';
@@ -271,7 +271,7 @@ export default function AddProductDialog(props) {
                             zIndex: 100000
                         }}
                     >
-                        {!isMinted ? <SuspenseLoader /> : <Success />}
+                        {/* {!isMinted ? <SuspenseLoader /> : <Success />} */}
                     </Box>
                 )}
             </Box>
