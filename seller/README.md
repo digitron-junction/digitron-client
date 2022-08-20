@@ -1,70 +1,151 @@
-# Getting Started with Create React App
+### Texh in React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- axios
+- react typescript
+- contextApi
+- redux
+- redux-thunk
 
-## Available Scripts
+### Technology Features
 
-In the project directory, you can run:
+- i18n
+- dark mode
+- react error boundary
+- axios interceptor
+- cancel request
+- authentication guards
+- @casl/ability role
+- role & permission based route.
+- wavesurfer
 
-### `npm start`
+### CI/CD
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- docker
+- bitbucket pipeline
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Testing
 
-### `npm test`
+- Jest
+- Enzyme
+- E2E
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### UI Component
 
-### `npm run build`
+- material UI
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Pattern design
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- atomic design
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Tools
 
-### `npm run eject`
+- eslint
+- prettier
+- husky
+- lint-staged
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Git replacing LF with CRLF
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+$ git config --global core.autocrlf false
+$ git rm --cached -r .
+$ git reset --hard
+```
+### Install extensions
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- eslint
+- tslint
+- prettier
+- editorConfig for VSCode
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Edit settings.json file
 
-## Learn More
+Windows: Go to File -> Preferences -> Settings or `Ctrl + ,`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Adding in the settings.json file & create .vscode/settings.json in root project
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+{
+  "files.associations": {
+    "*.jsx": "javascriptreact"
+  },
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
+```
 
-### Code Splitting
+## Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+# install node version
+Please install at least v15.2.0 version node
 
-### Analyzing the Bundle Size
+# install npm version
+Please install at least v7.0.10 version node
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+# install app's depndencie
+$ npm install
+```
 
-### Making a Progressive Web App
+## Scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+# install typescript
+$ npm install -g typescript
+```
 
-### Advanced Configuration
+```bash
+# dev server with PORT 3002 at http://localhost:3002/
+$ npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# build for production with minify
+$ npm run build
 
-### Deployment
+# run `lint` to tell you what is wrong code.
+$ npm run lint
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# run `format` to format all code based on your prettier and linting configuration.
+$ npm run format
+```
 
-### `npm run build` fails to minify
+## Directory sturcture code
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+````
+├── public/          #static files
+│   ├── assets/      #assets
+|   |    |── images  #images
+|   |    |── fonts   #fonts
+│   └── index.html   #html template
+│
+├── src/             #project root
+|   |── actions/     #actions redux
+|   |── apis/        #apis of feature
+|   |── assets/      #assets file
+|   |── components/  #common components reuse
+│   ├── configs/     #configs project
+│   ├── containers/  #containers source
+|   |── context/     #contextApi
+|   |── features/    #features of app
+|   |── guards/      #guard permissions
+│   ├── hooks/       #hooks source
+|   |── layouts/     #common layouts
+|   |── locales/     #multi languages
+│   ├── models/      #define interface
+|   |── reducers/    #reducers redux
+|   |── routes/      #common routes
+|   |── selectors/   #selectors redux
+│   ├── services/    #services source
+|   |── stores/      #stores redux
+|   |── themes/      #themes app
+│   ├── App.js
+│   ├── App.test.js
+│   ├── index.js
+
+└── package.json```
+````
