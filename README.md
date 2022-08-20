@@ -1,8 +1,8 @@
 # digitron-client
 
 ```
-minter -> minter
-post -> nft
+blog -> nftmaker
+createPost -> createNft
 ```
 
 ##
