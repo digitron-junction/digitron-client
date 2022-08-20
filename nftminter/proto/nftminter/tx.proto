@@ -11,3 +11,9 @@ service Msg {
 }
 
 // this line is used by starport scaffolding # proto/tx/message
+
+message Nft {
+    bytes creator = 1;
+    bytes sender = 2;
+    bytes reciever = 3;
+}
