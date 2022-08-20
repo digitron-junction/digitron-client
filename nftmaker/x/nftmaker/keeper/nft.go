@@ -50,19 +50,19 @@ func (k Keeper) SetNftCount(ctx sdk.Context, count uint64) {
 	store.Set(byteKey, bz)
 }
 
-func (k Keeper) AppendNft(ctx sdk.Context, nft types.Nft) uint64 {
+func (k Keeper) AppendNft(ctx sdk.Context, nft types.MsgCreateNft) uint64 {
 	// Get the current number of posts in the store
 	count := k.GetNftCount(ctx)
 
 	// Assign an ID to the post based on the number of posts in the store
-	nft.Id = count
+	// nft.image = count
 
 	// Get the store
 	store := prefix.NewStore(ctx.KVStore(k.storeKey), []byte(types.NftKey))
 
 	// Convert the post ID into bytes
 	byteKey := make([]byte, 8)
-	binary.BigEndian.PutUint64(byteKey, nft.Id)
+	// binary.BigEndian.PutUint64(byteKey, nft.Id)
 
 	// Marshal the nft into bytes
 	appendedValue := k.cdc.MustMarshal(&nft)

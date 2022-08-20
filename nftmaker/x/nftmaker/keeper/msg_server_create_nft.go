@@ -11,7 +11,7 @@ func (k msgServer) CreateNft(goCtx context.Context, msg *types.MsgCreateNft) (*t
 	ctx := sdk.UnwrapSDKContext(goCtx)
 
 	// Create variable of type Post
-	var nft = types.Nft{
+	var nft = types.MsgCreateNft{
 		Creator:   msg.Creator,
 		Owner:     msg.Owner,
 		Image:     msg.Image,
