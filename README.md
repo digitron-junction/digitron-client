@@ -1,5 +1,10 @@
 # digitron-client
 
+```
+minter -> minter
+post -> nft
+```
+
 ##
 
 TODO:
