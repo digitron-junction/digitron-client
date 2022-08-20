@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package minter.minter;
+package minter;
 
 option go_package = "minter/x/minter/types";
 

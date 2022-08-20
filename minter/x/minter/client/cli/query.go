@@ -45,6 +45,18 @@ cmd.AddCommand(CmdNfts())
 
 cmd.AddCommand(CmdNfts())
 
+cmd.AddCommand(CmdNfts())
+
+cmd.AddCommand(CmdNfts())
+
+cmd.AddCommand(CmdNfts())
+
+cmd.AddCommand(CmdGetnfts())
+
+cmd.AddCommand(CmdNfts())
+
+cmd.AddCommand(CmdNfts())
+
 // this line is used by starport scaffolding # 1
 
 	return cmd
