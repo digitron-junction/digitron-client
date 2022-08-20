@@ -17,10 +17,10 @@ export default function ProductCard(props) {
                 <Typography variant="h4" mt={1}>{props.name}</Typography>
                 <Typography variant="h5">{props.price}</Typography>
                 <Rating value={props.rating} readOnly />
+                <Typography variant="h6">{props.likeCount} likes</Typography>
             </Stack>
             <Stack direction="row" mt={2} justifyContent="space-between">
-                <Button variant="outlined" sx={{px: 1, py: 1, width: "45%"}}>Add to Cart</Button>
-                <Button variant="contained" sx={{width: "45%"}}>Buy Now</Button>
+                <Button variant="contained" sx={{width: "100%"}}>Buy Now</Button>
             </Stack>
         </CardContent>
     </Card>

@@ -2,52 +2,13 @@ import { Helmet } from 'react-helmet-async';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import { Container, Grid, Card, CardHeader, CardContent, Divider, Box, List } from '@mui/material';
-import { Demand, StatCard, SentimentalCommentBox, AddProductDialog, ProductsList, OrdersList } from 'src/components';
+import { Container, Grid, Card, CardHeader, CardContent, Box, List } from '@mui/material';
+import { StatCard, SentimentalCommentBox, AddProductDialog } from 'src/components';
 import {
-    Stack,
-    Typography,
-    Avatar,
-    ListItem,
-    ListItemAvatar,
-    ListItemText,
-    Button,
-    Rating,
     IconButton
 } from '@mui/material';
 import { ProductListItem } from 'src/components';
-import { Add, Edit, Delete, MoreVert, Star } from '@mui/icons-material';
-
-// const products = [
-//     {
-//         name: 'Hand Knotted Silk Carpet',
-//         description: 'Hand Knotted Silk Carpet. The pattern and colours are easy to coordinate with many different styles.',
-//         images: '/static/images/carpets/Antique-White-hand-knotted-silk-carpet.jpeg',
-//         rating: 5,
-//         price: '$ 8799',
-//         discountedPrice: '$ 8699',
-//         mintedNFT: false
-//     },
-//     {
-//         name: 'Oriental Design Rug',
-//         description: 'Hand Knotted Kashmiri Carpet. The dense, thick pile dampens sound and provides a soft surface to walk on.',
-//         images: '/static/images/carpets/oriental-design-rug.png',
-//         rating: 4,
-//         price: '$ 7699',
-//         discountedPrice: '$ 7499',
-//         mintedNFT: false
-//     },
-//     {
-//         name: 'Silk Rug',
-//         description: 'Hand Knotted Kashmiri Carpet. Designed in Persian Ardadil style.',
-//         images: '/static/images/carpets/persian-ardabil.jpeg',
-//         rating: 5,
-//         price: '$ 9699',
-//         discountedPrice: '$ 8499',
-//         mintedNFT: false
-//     }
-// ];
-
+import { Add } from '@mui/icons-material';
 
 const commentsData = {
     highlightedComment: {
@@ -108,7 +69,7 @@ export default function Inventory() {
                     <Grid item xs={12} md={8} xl={9}>
                         <Grid container rowSpacing={4} columnSpacing={{ xs: 4, xl: 4 }} justifyContent="center">
                             <Grid item xs={6} xl={4}>
-                                <StatCard name="Total Products" stat={6} />
+                                <StatCard name="Total Products" stat={products.length} />
                             </Grid>
                             <Grid item xs={6} xl={4}>
                                 <StatCard name="Products Left" stat={3} />
@@ -138,6 +99,7 @@ export default function Inventory() {
                                                     price={product.price}
                                                     mintedNFT={product.mintedNFT}
                                                     discountedPrice={product.discountedPrice}
+                                                    likeCount={product.likeCount}
                                                 />
                                             ))}
                                         </List>

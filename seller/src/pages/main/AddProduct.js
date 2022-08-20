@@ -62,7 +62,7 @@ function Profile() {
             }
         })();
 
-        return () => {};
+        return () => { };
     }, []);
 
     return (

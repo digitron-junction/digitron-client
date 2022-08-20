@@ -13,7 +13,8 @@ import PersonIcon from '@mui/icons-material/Person';
 import InventoryIcon from '@mui/icons-material/Inventory';
 import InsightsIcon from '@mui/icons-material/Insights';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
-import AddIcon from '@mui/icons-material/Person';
+import AddBoxIcon from '@mui/icons-material/AddBox';
+import PeopleIcon from '@mui/icons-material/People';
 
 const navItems = [
     {
@@ -34,12 +35,17 @@ const navItems = [
     {
         name: 'Add Product',
         link: '/add-product',
-        icon: AddIcon
+        icon: AddBoxIcon
     },
     {
         name: 'Orders',
         link: '/orders',
         icon: AccountBalanceWalletIcon
+    },
+    {
+        name: 'My Netwrok',
+        link: '/network',
+        icon: PeopleIcon
     },
     
 ];

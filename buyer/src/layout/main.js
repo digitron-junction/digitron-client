@@ -54,7 +54,7 @@ export default function MainLayout(props) {
             <Dhabba2 />
             <Dhabba3 />
             <Navbar />
-            <Box sx={{m: "auto", py: 10, width: {xl: "70%", lg: "80%", xs: "90%"}}}>
+            <Box sx={{m: "auto", py: 10, width: {xl: "80%", lg: "80%", xs: "90%"}}}>
                 <Outlet />
             </Box>
         </Box>

@@ -76,6 +76,10 @@ export const routes: Array<PartialRouteObject> = [
                 element: <Pages.Profile />
             },
             {
+                path: 'network',
+                element: <Pages.Network />
+            },
+            {
                 path: '*',
                 element: <Pages.Status404 />
             }

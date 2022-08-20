@@ -24,10 +24,6 @@ const navigationMap = [
     icon: <Category />,
     link: "/categories"
   },
-  {
-    icon: <ShoppingBag />,
-    link: "/cart"
-  }
 ]
 
 const NavbarWrapper = styled(Stack)(
