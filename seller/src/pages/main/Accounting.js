@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 
-import { List, Container, Grid, Card, CardHeader, CardContent, Divider, Typography, Box } from '@mui/material';
+import { List, Container, Grid, Card, CardHeader, CardContent, Divider, Typography, Box, ListItemAvatar, Avatar, Button, Rating } from '@mui/material';
 import { ProductListItem, SectionCard, FAQ, Wallet, OrderListItem } from 'src/components';
+import { Star } from '@mui/icons-material';
 
 const products = [
     {
@@ -39,23 +40,23 @@ export default function Accounting() {
                                 <SectionCard title="My Orders">
                                     {/* <OrderListItem /> */}
                                     <List>
-                                        {products.map((product, index) => (
+                                        {products.map((pro, index) => (
                                             <>
                                                 <ListItemAvatar>
-                                                    <Avatar src={props.photo} variant="rounded" sx={{ width: 150, height: 150 }} />
+                                                    <Avatar src={pro.img} variant="rounded" sx={{ width: 150, height: 150 }} />
                                                 </ListItemAvatar>
                                                 <Grid container spacing={2} sx={{ ml: 1 }}>
                                                     <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
                                                         <Typography variant="h4">{pro.name}</Typography>
                                                         <Typography variant="body1">{pro.desc}</Typography>
                                                         <Rating
-                                                            value={props.rating}
+                                                            value={pro.rating}
                                                             precision={0.5}
                                                             readOnly
                                                             icon={<Star color="primary" sx={{ fontSize: 32 }} />}
                                                             emptyIcon={<Star sx={{ color: '#C4C4C4', fontSize: 32 }} />}
                                                         />
-                                                        <Typography variant="h5">{prop.price}</Typography>
+                                                        <Typography variant="h5">{pro.price}</Typography>
                                                     </Grid>
                                                     <Grid
                                                         item
@@ -68,12 +69,12 @@ export default function Accounting() {
                                                             justifyContent: 'flex-end'
                                                         }}
                                                     >
-                                                        {props.mintedNFT ? (
+                                                        {/* {pro.mintedNFT ? (
                                                             <Button onClick={props.onAccept}>Accept</Button>
                                                         ) : (
                                                             <Button onClick={props.onTransferNFT}>Transfer NFT</Button>
-                                                        )}
-                                                        <Button onClick={props.onDecline}> Decline </Button>
+                                                        )} */}
+                                                        <Button> Decline </Button>
                                                     </Grid>
                                                 </Grid></>
                                         ))}

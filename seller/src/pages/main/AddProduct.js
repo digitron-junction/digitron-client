@@ -150,6 +150,23 @@ function Profile() {
                                     <TextInput label="Selling Price" onChange={(val) => handleChange('price', val)} />
                                 </Grid>
                             </Grid>
+                            <Button
+                                variant="contained"
+                                sx={{
+                                    width: '30%',
+                                    p: 1.5,
+                                    mt: 3,
+                                    // alignItems: 'center',
+                                    background: 'linear-gradient(269.95deg, #FFD422 0.02%, #FF7D05 97.45%)',
+                                    // 'linear-gradient(90deg, #3E97FF 1.49%, #9DC9FC 100%)',
+                                    color: 'white',
+                                    fontWeight: 400
+                                }}
+                                // onClick={uploa   d}
+                            >
+                                {' '}
+                                Generate NFT{' '}
+                            </Button>
                         </Grid>
                     </Grid>
                     <Box pb={40}></Box>

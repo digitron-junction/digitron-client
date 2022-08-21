@@ -44,7 +44,7 @@ export default function TextInput({ label, onChange }) {
                     whiteSpace: 'nowrap',
                     overflow: 'hidden',
                     width: '100%',
-                    color: 'green'
+                    color: '#777'
                 }
             }}
         />
