@@ -27,6 +27,7 @@ export default function Home() {
                     {products.length > 0 && products.map((product, index) => (
                         <Grid item xs={2} sm={2} md={2} key={index}>
                             <ProductCard
+                                id={product.id}
                                 name={product.name}
                                 img={product.images}
                                 rating={product.rating}

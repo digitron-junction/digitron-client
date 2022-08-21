@@ -7,7 +7,7 @@ export default function ProductCard(props) {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        navigate("/product")
+        navigate("/product/" + props.id,)
     }
 
     return <Card sx={{width: "300px"}} onClick={handleClick}>

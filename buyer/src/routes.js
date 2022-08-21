@@ -21,7 +21,7 @@ const routes = [
                 element: <Pages.Categories />
             },
             {
-                path: "/product",
+                path: "/product/:id",
                 element: <Pages.Product />
             },
             {

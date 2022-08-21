@@ -1,9 +1,24 @@
+import { useState, useEffect } from "react";
 import { Stack, Grid } from "@mui/material";
+import axios from "axios";
 import { ProductCard, ProductCardExtended, MyBag } from "../../content/components";
 
 import { Section, Comment } from "../../content/components";
 
 export default function Product(props) {
+    const [products, setProducts] = useState([]);
+    useEffect(() => {
+        (async () => {
+            const result = await axios(
+                'https://junction-prod.onrender.com/api/v1/stores/1/products',
+            );
+
+            console.log(result.data.data.products);
+            console.log("props.id", props.id);
+            setProducts(result.data.data.products)
+        })();
+    }, []);
+
     return <Grid container spacing={10}>
         <Grid item xs={8}>
             <ProductCardExtended
