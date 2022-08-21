@@ -9,6 +9,23 @@ export default function TextInput({ label, onChange }) {
         onChange(e.target.value);
     };
 
+    const styles = {
+        'input-label': {
+            textOverflow: 'ellipsis',
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+            width: '100%',
+            color: 'red'
+        },
+
+        input: {
+            '&::placeholder': {
+                textOverflow: 'ellipsis !important',
+                color: 'blue'
+            }
+        }
+    };
+
     return (
         <TextField
             variant="outlined"
@@ -20,6 +37,15 @@ export default function TextInput({ label, onChange }) {
                 border: '0.5px solid #FFFFFF',
                 boxShadow: '0px 11px 30px rgba(68, 82, 82, 0.02)',
                 borderRadius: '12.469px'
+            }}
+            InputLabelProps={{
+                style: {
+                    textOverflow: 'ellipsis',
+                    whiteSpace: 'nowrap',
+                    overflow: 'hidden',
+                    width: '100%',
+                    color: 'green'
+                }
             }}
         />
     );
