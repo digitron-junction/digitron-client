@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 import {
@@ -19,7 +19,8 @@ import {
     List,
     ListItem,
     ListItemIcon,
-    ListItemText
+    ListItemText,
+    Button
 } from '@mui/material';
 import { PersonalDetailsForm, AddressDetailsForm, ArtistDetailsForm } from 'src/components';
 
@@ -27,8 +28,21 @@ import { ReactComponent as InstagramIcon } from 'src/assets/icons/instagram.svg'
 import { ReactComponent as FacebookIcon } from 'src/assets/icons/facebook.svg';
 import { ReactComponent as PinterestIcon } from 'src/assets/icons/pinterest.svg';
 import { ReactComponent as TwitterIcon } from 'src/assets/icons/twitter.svg';
+import { AddCircleOutline } from '@mui/icons-material';
+import SelectInput from '@mui/material/Select/SelectInput';
+import TextInput from 'src/components/misc/Text';
 
 function Profile() {
+    const [selectedImage, setSelectedImage] = useState();
+
+    const formValues = useRef({});
+
+    const handleChange = (key, value) => {
+        formValues.current[key] = value;
+        console.log(formValues.current);
+        onFormValuesChange(formValues.current);
+    };
+
     const profileData = {
         img: 'https://images.yourstory.com/cs/wordpress/2013/06/Women1.jpg'
     };
@@ -73,56 +87,69 @@ function Profile() {
             <Card>
                 <Container maxWidth={'lg'} sx={{ p: 5 }}>
                     <Grid container direction="row" spacing={4}>
-                        <Grid item xs={12} md={3}>
-                            <Stack alignItems="center" gap={2}>
-                                <Hidden mdDown>
-                                    <List>
-                                        <ListItem>
-                                            <ListItemIcon>
-                                                {' '}
-                                                <InstagramIcon width={70} height={70} />{' '}
-                                            </ListItemIcon>
-                                            <ListItemText> Instagram ID </ListItemText>
-                                        </ListItem>
-                                        <ListItem>
-                                            <ListItemIcon>
-                                                {' '}
-                                                <FacebookIcon width={70} height={70} />{' '}
-                                            </ListItemIcon>
-                                            <ListItemText> Facebook ID </ListItemText>
-                                        </ListItem>
-                                        <ListItem>
-                                            <ListItemIcon>
-                                                {' '}
-                                                <PinterestIcon width={70} height={70} />{' '}
-                                            </ListItemIcon>
-                                            <ListItemText> Pinterest ID </ListItemText>
-                                        </ListItem>
-                                        <ListItem>
-                                            <ListItemIcon>
-                                                {' '}
-                                                <TwitterIcon width={70} height={70} />{' '}
-                                            </ListItemIcon>
-                                            <ListItemText> Twitter ID </ListItemText>
-                                        </ListItem>
-                                    </List>
-                                </Hidden>
-                                <Hidden mdUp>
-                                    <Stack direction="row" gap={3}>
-                                        <InstagramIcon width={70} height={70} />
-                                        <FacebookIcon width={70} height={70} />
-                                        <PinterestIcon width={70} height={70} />
-                                        <TwitterIcon width={70} height={70} />
-                                    </Stack>
-                                </Hidden>
-                            </Stack>
+                        <Grid
+                            item
+                            xs={12} md={3}
+                            sx={{
+                                position: 'relative',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center'
+                            }}
+                        >
+                            <Avatar
+                                variant="rounded"
+                                src={selectedImage ? URL.createObjectURL(selectedImage) : '/static/images/Image.png'}
+                                sx={{
+                                    width: '80%',
+                                    height: '80%',
+                                    borderRadius: 5,
+                                    filter: 'brightness(0.6)'
+                                }}
+                            />
+                            <Box
+                                sx={{
+                                    color: 'white',
+                                    position: 'absolute',
+                                    left: '38%',
+                                    top: '42%'
+                                }}
+                            >
+                                {/* upload button */}
+                                <Button variant="text" component="label">
+                                    <AddCircleOutline sx={{ color: 'white', fontSize: 50 }} />
+                                    <input
+                                        onChange={(e) =>
+                                            setSelectedImage(e.target.files ? e.target.files[0] : undefined)
+                                        }
+                                        accept="image/*"
+                                        type="file"
+                                        hidden
+                                    />
+                                </Button>
+                            </Box>
                         </Grid>
                         <Grid item xs={12} md={9}>
-                            <Stack direction="column" gap={5}>
-                                <PersonalDetailsForm />
-                                <ArtistDetailsForm />
-                                <AddressDetailsForm />
-                            </Stack>
+                            <Grid container rowSpacing={4} columnSpacing={3}>
+                                <Grid item xs={12}>
+                                    <TextInput label="Product Name" onChange={(val) => handleChange('name', val)} color="warning" />
+                                </Grid>
+                                <Grid item xs={6}>
+                                    <TextInput label="Categorey" onChange={(val) => handleChange('categorey', val)} />
+                                </Grid>
+                                <Grid item xs={6}>
+                                    <TextInput label="Sub Categorey" onChange={(val) => handleChange('subCategorey', val)} />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <TextInput label="Product Description" onChange={(val) => handleChange('descriprion', val)} />
+                                </Grid>
+                                <Grid item xs={6}>
+                                    <TextInput label="Original Price" onChange={(val) => handleChange('originalPrice', val)} />
+                                </Grid>
+                                <Grid item xs={6}>
+                                    <TextInput label="Selling Price" onChange={(val) => handleChange('price', val)} />
+                                </Grid>
+                            </Grid>
                         </Grid>
                     </Grid>
                     <Box pb={40}></Box>

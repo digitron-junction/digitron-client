@@ -56,7 +56,7 @@ export default function ProductListItem(props) {
                             textAlign: 'center'
                         }}
                     >
-                        {props.mintedNFT ? 'Minted NFT' : 'Mint NFT'}
+                        NFT Minted
                     </Button>
                 </Grid>
             </Grid>
