@@ -15,7 +15,7 @@ export default function PersonalDetailsForm({ onFormValuesChange }) {
     return (
         <Grid container rowSpacing={4} columnSpacing={3}>
             <Grid item xs={6}>
-                <TextInput label="First Name" onChange={(val) => handleChange('firstName', val)} />
+                <TextInput label="First Name" onChange={(val) => handleChange('firstName', val)} color="warning" />
             </Grid>
             <Grid item xs={6}>
                 <TextInput label="Last Name" onChange={(val) => handleChange('lastName', val)} />
