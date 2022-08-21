@@ -9,7 +9,7 @@ export default function ProductListItem(props) {
             </ListItemAvatar>
             <Grid container spacing={2} sx={{ ml: 1 }}>
                 <Grid item xs={12} md={6} sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-                    <Typography variant="h4">{props.name}</Typography>
+                    <Typography variant="h3">{props.name}</Typography>
                     <Typography variant="h6">{props.desc}</Typography>
                     <Rating
                         value={props.rating}
@@ -18,8 +18,9 @@ export default function ProductListItem(props) {
                         icon={<Star color="primary" sx={{ fontSize: 32 }} />}
                         emptyIcon={<Star sx={{ color: '#C4C4C4', fontSize: 32 }} />}
                     />
-                    <Typography variant="h5">${props.price}</Typography>
+                    <Typography variant="h4">${props.price}</Typography>
                     <Typography variant="h6">{props.likeCount} likes</Typography>
+                    <Typography variant="h6">{props.stock} peices left</Typography>
                 </Grid>
                 <Grid
                     item

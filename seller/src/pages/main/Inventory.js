@@ -100,6 +100,7 @@ export default function Inventory() {
                                                     mintedNFT={product.mintedNFT}
                                                     discountedPrice={product.discountedPrice}
                                                     likeCount={product.likeCount}
+                                                    stock={product.stock}
                                                 />
                                             ))}
                                         </List>

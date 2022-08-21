@@ -1,5 +1,6 @@
 /* eslint-disable */
 import { Reader, util, configure, Writer } from "protobufjs/minimal";
+//@ts-ignore
 import * as Long from "long";
 
 export const protobufPackage = "nftmaker.nftmaker";
