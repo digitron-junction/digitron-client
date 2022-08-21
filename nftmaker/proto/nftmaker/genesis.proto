@@ -1,0 +1,14 @@
+syntax = "proto3";
+package nftmaker.nftmaker;
+
+import "gogoproto/gogo.proto";
+import "nftmaker/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "nftmaker/x/nftmaker/types";
+
+// GenesisState defines the nftmaker module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}
