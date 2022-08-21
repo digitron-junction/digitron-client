@@ -22,6 +22,9 @@ export default function PersonalDetailsForm() {
             <Grid item xs={6}>
                 <TextInput label="District" />
             </Grid>
+            <Grid item xs={6}>
+                <TextInput label="Country" />
+            </Grid>
         </Grid>
     );
 }

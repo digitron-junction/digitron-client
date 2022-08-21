@@ -1,32 +1,25 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 import { List, Container, Grid, Card, CardHeader, CardContent, Divider, Typography, Box, ListItemAvatar, Avatar, Button, Rating } from '@mui/material';
 import { ProductListItem, SectionCard, FAQ, Wallet, OrderListItem } from 'src/components';
 import { Star } from '@mui/icons-material';
 
-const products = [
-    {
-        name: 'Good Product',
-        desc: 'Very good product with NFT',
-        img: '/static/images/Image.png',
-        rating: 3,
-        price: 50,
-        discountedPrice: 25,
-        mintedNFT: true
-    },
-    {
-        name: 'A very Good Product',
-        desc: 'Very good product without NFT',
-        img: '/static/images/Image.png',
-        rating: 5,
-        price: 50,
-        discountedPrice: 30,
-        mintedNFT: false
-    }
-];
+
 
 export default function Accounting() {
+    const [products, setProducts] = useState([]);
+    useEffect(() => {
+        (async () => {
+            const result = await axios(
+                'https://junction-prod.onrender.com/api/v1/stores/1/orders',
+            );
+
+            console.log(result.data.data.orders);
+            console.log("---")
+            setProducts(result.data.data.orders)
+        })();
+    }, []);
     return (
         <>
             <Helmet>
@@ -68,13 +61,8 @@ export default function Accounting() {
                                                             alignItems: 'flex-end',
                                                             justifyContent: 'flex-end'
                                                         }}
-                                                    >
-                                                        {/* {pro.mintedNFT ? (
-                                                            <Button onClick={props.onAccept}>Accept</Button>
-                                                        ) : (
-                                                            <Button onClick={props.onTransferNFT}>Transfer NFT</Button>
-                                                        )} */}
-                                                        <Button> Decline </Button>
+                                                    >                                                        
+                                                        <Button onClick={props.onDecline}> Mark as Delivered </Button>
                                                     </Grid>
                                                 </Grid></>
                                         ))}

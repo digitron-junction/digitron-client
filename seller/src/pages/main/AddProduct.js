@@ -22,14 +22,8 @@ import {
     ListItemText,
     Button
 } from '@mui/material';
-import { PersonalDetailsForm, AddressDetailsForm, ArtistDetailsForm } from 'src/components';
 
-import { ReactComponent as InstagramIcon } from 'src/assets/icons/instagram.svg';
-import { ReactComponent as FacebookIcon } from 'src/assets/icons/facebook.svg';
-import { ReactComponent as PinterestIcon } from 'src/assets/icons/pinterest.svg';
-import { ReactComponent as TwitterIcon } from 'src/assets/icons/twitter.svg';
 import { AddCircleOutline } from '@mui/icons-material';
-import SelectInput from '@mui/material/Select/SelectInput';
 import TextInput from 'src/components/misc/Text';
 
 function Profile() {
@@ -43,9 +37,7 @@ function Profile() {
         onFormValuesChange(formValues.current);
     };
 
-    const profileData = {
-        img: 'https://images.yourstory.com/cs/wordpress/2013/06/Women1.jpg'
-    };
+    
 
     useEffect(() => {
         (async () => {
@@ -162,10 +154,10 @@ function Profile() {
                                     color: 'white',
                                     fontWeight: 400
                                 }}
-                                // onClick={uploa   d}
+                                onClick={() => {}}
                             >
                                 {' '}
-                                Generate NFT{' '}
+                                {"Save & Generate NFT"}{' '}
                             </Button>
                         </Grid>
                     </Grid>
