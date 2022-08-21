@@ -2,20 +2,20 @@ import { SectionCard, Comment } from 'src/components';
 
 const faqs = [
     {
-        question: 'Question?',
-        answer: 'Answer?'
+        question: 'What are NFTs?',
+        answer: 'They are non fungible token. Unique and once created they are stored in blockchain?'
     },
     {
-        question: 'Question?',
-        answer: 'Answer?'
+        question: 'What will be an advantage for minting an NFT?',
+        answer: 'You can use it to create a unique item for your business. It will act as a certificate of authentiiy for your product.'
     },
     {
-        question: 'Question?',
-        answer: 'Answer?'
+        question: 'Any charges for minting an NFT?',
+        answer: 'A very neglibable amount of 0.001 ETH.'
     },
     {
-        question: 'Question?',
-        answer: 'Answer?'
+        question: 'How to make a NFT?',
+        answer: 'Worry no more, create an account with keplr wallet?'
     }
 ];
 

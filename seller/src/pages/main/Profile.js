@@ -90,7 +90,6 @@ function Profile() {
                         <Grid item xs={12} md={9}>
                             <Stack direction="column" gap={5}>
                                 <PersonalDetailsForm />
-                                <ArtistDetailsForm />
                                 <AddressDetailsForm />
                             </Stack>
                         </Grid>

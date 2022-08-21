@@ -3,9 +3,9 @@ export const sessionData: SessionData = {
 };
 
 export const userProfile: UserProfile = {
-    name: 'Harshal Dave',
+    name: 'Suen Jong',
     type: 'Poter',
-    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwStw05Bi15rPkEjxsJnMxBMcQWLCLv0ZHRg&usqp=CAU'
+    photo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNRqFC2cTYDv7hrdcLkkPDDBanT9-YFw7V6UvXHisLkA&s'
 };
 
 export const messages: Array<Message> = [

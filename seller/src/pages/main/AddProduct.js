@@ -22,14 +22,8 @@ import {
     ListItemText,
     Button
 } from '@mui/material';
-import { PersonalDetailsForm, AddressDetailsForm, ArtistDetailsForm } from 'src/components';
 
-import { ReactComponent as InstagramIcon } from 'src/assets/icons/instagram.svg';
-import { ReactComponent as FacebookIcon } from 'src/assets/icons/facebook.svg';
-import { ReactComponent as PinterestIcon } from 'src/assets/icons/pinterest.svg';
-import { ReactComponent as TwitterIcon } from 'src/assets/icons/twitter.svg';
 import { AddCircleOutline } from '@mui/icons-material';
-import SelectInput from '@mui/material/Select/SelectInput';
 import TextInput from 'src/components/misc/Text';
 
 import { pinFileToIPFS } from 'src/utils/pinToIpfs';
@@ -203,6 +197,23 @@ function Profile() {
                                     <TextInput label="Selling Price" onChange={(val) => handleChange('price', val)} />
                                 </Grid>
                             </Grid>
+                            <Button
+                                variant="contained"
+                                sx={{
+                                    width: '30%',
+                                    p: 1.5,
+                                    mt: 3,
+                                    // alignItems: 'center',
+                                    background: 'linear-gradient(269.95deg, #FFD422 0.02%, #FF7D05 97.45%)',
+                                    // 'linear-gradient(90deg, #3E97FF 1.49%, #9DC9FC 100%)',
+                                    color: 'white',
+                                    fontWeight: 400
+                                }}
+                                onClick={() => {}}
+                            >
+                                {' '}
+                                {'Save & Generate NFT'}{' '}
+                            </Button>
                         </Grid>
                     </Grid>
                     <Box pb={40}></Box>

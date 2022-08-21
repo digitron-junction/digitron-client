@@ -15,29 +15,19 @@ export default function PersonalDetailsForm({ onFormValuesChange }) {
     return (
         <Grid container rowSpacing={4} columnSpacing={3}>
             <Grid item xs={6}>
-                <TextInput label="First Name" onChange={(val) => handleChange('firstName', val)} color="warning" />
+                <TextInput label="Your Name" onChange={(val) => handleChange('userName', val)} color="warning" />
             </Grid>
             <Grid item xs={6}>
-                <TextInput label="Last Name" onChange={(val) => handleChange('lastName', val)} />
+                <TextInput label="Store Name" onChange={(val) => handleChange('name', val)} />
             </Grid>
             <Grid item xs={12}>
                 <TextInput label="Email" onChange={(val) => handleChange('email', val)} />
             </Grid>
             <Grid item xs={6}>
-                <TextInput label="Date of birth" onChange={(val) => handleChange('dateOfBirth', val)} />
+                <TextInput label="Phone No" onChange={(val) => handleChange('phone', val)} />
             </Grid>
             <Grid item xs={6}>
-                <SelectInput
-                    label="Gender"
-                    options={['Male', 'Female']}
-                    onChange={(val) => handleChange('gender', val)}
-                />
-            </Grid>
-            <Grid item xs={6}>
-                <TextInput label="Age" onChange={(val) => handleChange('age', val)} />
-            </Grid>
-            <Grid item xs={6}>
-                <TextInput label="Phone Number" onChange={(val) => handleChange('phoneNumber', val)} />
+                <TextInput label="Store Categorey" onChange={(val) => handleChange('categorey', val)} />
             </Grid>
         </Grid>
     );

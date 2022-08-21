@@ -12,13 +12,13 @@ import { providers, Contract } from 'ethers';
 export default function Wallet(props) {
     const [waletAddress, setWalletAddress] = useState('loading...');
 
-    useEffect(() => {
-        async function name() {
-            const add = await signer.getAddress();
-            setWalletAddress(add);
-        }
-        name();
-    }, [signer]);
+    // useEffect(() => {
+    //     async function name() {
+    //         // const add = await signer.getAddress();
+    //         // setWalletAddress(add);
+    //     }
+    //     name();
+    // }, [signer]);
 
     return (
         <SectionCard title="Wallet">
