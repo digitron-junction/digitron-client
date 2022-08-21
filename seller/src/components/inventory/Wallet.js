@@ -5,9 +5,9 @@ import { ContentCopy } from '@mui/icons-material';
 import { useState, useEffect } from 'react';
 import { providers, Contract } from 'ethers';
 
-const provider = new providers.Web3Provider(window.ethereum);
+// const provider = new providers.Web3Provider(window.ethereum);
 // get the end user
-const signer = provider.getSigner();
+// const signer = provider.getSigner();
 
 export default function Wallet(props) {
     const [waletAddress, setWalletAddress] = useState('loading...');

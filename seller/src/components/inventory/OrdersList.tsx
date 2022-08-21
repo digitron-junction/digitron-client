@@ -6,9 +6,9 @@ import contractAddress from 'src/constants/contractAddress';
 
 // import NFTMinter from '../../artifacts/contracts/NFTMinter.sol/NFTMinter.json';
 
-const provider = new providers.Web3Provider(window.ethereum);
+// const provider = new providers.Web3Provider(window.ethereum);
 // get the end user
-const signer = provider.getSigner();
+// const signer = provider.getSigner();
 // get the smart contract
 // const contract = new Contract(contractAddress, NFTMinter.abi, signer);
 
