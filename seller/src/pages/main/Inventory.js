@@ -93,7 +93,7 @@ export default function Inventory() {
                                                     key={index}
                                                     showButtons
                                                     name={product.name}
-                                                    photo={product.images}
+                                                    photo={product.images[0].url}
                                                     rating={product.rating}
                                                     desc={product.description}
                                                     price={product.price}

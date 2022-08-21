@@ -17,7 +17,7 @@ export default function ProductCard(props) {
                 <Typography variant="h4" mt={1}>{props.name}</Typography>
                 <Typography variant="h5">{props.price}</Typography>
                 <Rating value={props.rating} readOnly />
-                <Typography variant="h6">{props.likeCount} likes</Typography>
+                <Typography variant="h6" sx={{ textDecoration: 'underline' }}>{props.likeCount} likes</Typography>
             </Stack>
             <Stack direction="row" mt={2} justifyContent="space-between">
                 <Button variant="contained" sx={{width: "100%"}}>Buy Now</Button>
