@@ -1,9 +1,30 @@
 import { Stack, Grid, Typography, Avatar, ListItem, ListItemAvatar, Button, Rating, IconButton } from '@mui/material';
 import { Edit, Delete, Star } from '@mui/icons-material';
+import { QRCodeSVG } from 'qrcode.react';
 
 export default function ProductListItem(props) {
     return (
         <ListItem sx={{ alignItems: 'stretch', mb: 3 }}>
+            <Grid sx={{ mr: 1 }}>
+                <QRCodeSVG value={`https://digitron-client.vercel.app/product/${props.id}`} />
+                <div>
+                    <Button
+                        variant="contained"
+                        color={'success'}
+                        size="small"
+                        sx={{
+                            width: { xs: '50%', sm: '100%' },
+                            color: 'white',
+                            backgroundColor: (theme) => theme.palette['success'].main,
+                            p: (theme) => theme.spacing(1, 2),
+                            borderRadius: 2,
+                            textAlign: 'center'
+                        }}
+                    >
+                        Print QR
+                    </Button>
+                </div>
+            </Grid>
             <ListItemAvatar>
                 <Avatar src={props.photo} variant="rounded" sx={{ width: 150, height: 150 }} />
             </ListItemAvatar>
@@ -22,6 +43,7 @@ export default function ProductListItem(props) {
                     <Typography variant="h6">{props.likeCount} likes</Typography>
                     <Typography variant="h6">{props.stock} peices left</Typography>
                 </Grid>
+
                 <Grid
                     item
                     xs={12}
