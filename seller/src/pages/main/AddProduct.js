@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
-
+// import {} from '@cos';
 import {
     Hidden,
     Typography,
@@ -32,8 +32,23 @@ import { AddCircleOutline } from '@mui/icons-material';
 import SelectInput from '@mui/material/Select/SelectInput';
 import TextInput from 'src/components/misc/Text';
 
+import { pinFileToIPFS } from 'src/utils/pinToIpfs';
+import generateUUID from 'src/utils/generateUUID';
+
 function Profile() {
     const [selectedImage, setSelectedImage] = useState();
+    const [loading, setLoading] = useState(false);
+    const [name, setName] = useState('');
+    const [productPrice, setProductPrice] = useState('');
+    const [productMRP, setProductMRP] = useState('');
+    const [productCategory, setProductCategory] = useState('');
+    const [productTags, setProductTags] = useState('');
+    const [ipfsHash, setIpfsHash] = useState('');
+    const [contarctId, setContarctId] = useState('');
+    const [minterWalletAddress, setMinterWalletAddress] = useState('');
+    const [postId, setPostId] = useState('');
+    const [qty, setQty] = useState('');
+    const [isMinted, setIsMinted] = useState(false);
 
     const formValues = useRef({});
 
@@ -41,10 +56,6 @@ function Profile() {
         formValues.current[key] = value;
         console.log(formValues.current);
         onFormValuesChange(formValues.current);
-    };
-
-    const profileData = {
-        img: 'https://images.yourstory.com/cs/wordpress/2013/06/Women1.jpg'
     };
 
     useEffect(() => {
@@ -73,11 +84,39 @@ function Profile() {
                     accounts[0].address,
                     offlineSigner
                 );
+
+                console.log(cosmJS);
+
+                // setMinterWalletAddress(cosmJS.)
             }
         })();
 
-        return () => { };
+        return () => {};
     }, []);
+
+    const upload = async () => {
+        setLoading(true);
+        // console.log('Started timing out');
+        // setTimeout(() => {
+        // 	console.log('Timed out');
+        // 	// setLoading(false)
+        // 	setIsMinted(true);
+        // }, 2000);
+        // return;
+        try {
+            const id = generateUUID();
+            const pinataResponse = await pinFileToIPFS(selectedImage, name, id);
+            if (window.ethereum && pinataResponse) {
+                await window.ethereum.enable();
+
+                setIpfsHash(pinataResponse.data.IpfsHash);
+            }
+        } catch (err) {
+            console.error(err);
+            alert('An error occured!');
+            setLoading(false);
+        }
+    };
 
     return (
         <>
@@ -89,7 +128,8 @@ function Profile() {
                     <Grid container direction="row" spacing={4}>
                         <Grid
                             item
-                            xs={12} md={3}
+                            xs={12}
+                            md={3}
                             sx={{
                                 position: 'relative',
                                 display: 'flex',
@@ -132,19 +172,32 @@ function Profile() {
                         <Grid item xs={12} md={9}>
                             <Grid container rowSpacing={4} columnSpacing={3}>
                                 <Grid item xs={12}>
-                                    <TextInput label="Product Name" onChange={(val) => handleChange('name', val)} color="warning" />
+                                    <TextInput
+                                        label="Product Name"
+                                        onChange={(val) => handleChange('name', val)}
+                                        color="warning"
+                                    />
                                 </Grid>
                                 <Grid item xs={6}>
                                     <TextInput label="Categorey" onChange={(val) => handleChange('categorey', val)} />
                                 </Grid>
                                 <Grid item xs={6}>
-                                    <TextInput label="Sub Categorey" onChange={(val) => handleChange('subCategorey', val)} />
+                                    <TextInput
+                                        label="Sub Categorey"
+                                        onChange={(val) => handleChange('subCategorey', val)}
+                                    />
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <TextInput label="Product Description" onChange={(val) => handleChange('descriprion', val)} />
+                                    <TextInput
+                                        label="Product Description"
+                                        onChange={(val) => handleChange('descriprion', val)}
+                                    />
                                 </Grid>
                                 <Grid item xs={6}>
-                                    <TextInput label="Original Price" onChange={(val) => handleChange('originalPrice', val)} />
+                                    <TextInput
+                                        label="Original Price"
+                                        onChange={(val) => handleChange('originalPrice', val)}
+                                    />
                                 </Grid>
                                 <Grid item xs={6}>
                                     <TextInput label="Selling Price" onChange={(val) => handleChange('price', val)} />
