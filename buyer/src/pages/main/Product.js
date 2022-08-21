@@ -37,32 +37,32 @@ export default function Product(props) {
             <Section title="More from the artist">
                 <Stack direction="row" gap={5}>
                     <ProductCard
-                        name="Pashmina Shawls"
+                        name="Cermaic Pots"
                         price={15880}
                         discountedPrice={15000}
                         rating={3.2}
-                        img="https://5.imimg.com/data5/SU/VP/MY-779056/pashmina-shawls-500x500.jpg"
+                        img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDjvKjmNvzAs2McaxIHGHv9TCju-qsm6J3gU8Fa5Q8twBAWWTpzmsaCApSLtqMEoed4ok&usqp=CAU"
                     />
                     <ProductCard
-                        name="Pashmina Shawls"
-                        price={15880}
+                        name="Cotton Shawls"
+                        price={1080}
                         discountedPrice={15000}
                         rating={3.2}
-                        img="https://5.imimg.com/data5/SU/VP/MY-779056/pashmina-shawls-500x500.jpg"
+                        img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiuHKt5AY91mi4Nzmnp4-igSn6Fmi2FPgFPA&usqp=CAU"
                     />
                     <ProductCard
-                        name="Pashmina Shawls"
-                        price={15880}
+                        name="Pashmina Carpet"
+                        price={1480}
                         discountedPrice={15000}
                         rating={3.2}
-                        img="https://5.imimg.com/data5/SU/VP/MY-779056/pashmina-shawls-500x500.jpg"
+                        img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpcEeAsT7Tk2MkpoCUmxpo3GBpYE7iflOhiw&usqp=CAU"
                     />
                     <ProductCard
-                        name="Pashmina Shawls"
-                        price={15880}
+                        name="Paper Art"
+                        price={10000}
                         discountedPrice={15000}
                         rating={3.2}
-                        img="https://5.imimg.com/data5/SU/VP/MY-779056/pashmina-shawls-500x500.jpg"
+                        img="https://mymodernmet.com/wp/wp-content/uploads/2022/04/eugenia-zoloto-papear-art-war-2.jpg"
                     />
                 </Stack>
             </Section>
